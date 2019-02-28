@@ -1,6 +1,6 @@
 {
   "name": "hello-world",
-  "author": "Professor Krasso",
+  "author": "Jason Sullenger",
   "private": true,
   "dependencies": {
     "express": "^4.16.4"

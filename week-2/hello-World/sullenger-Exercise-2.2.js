@@ -7,6 +7,10 @@
 ;===========================================
 */
 
+// Console logs the header created previously
+const header = require('../sullenger-header.js');
+console.log(header.display("Jason" , "Sullenger" , "Exercise 2.2"));
+
 var express = require("express");
 var http = require("http");
 

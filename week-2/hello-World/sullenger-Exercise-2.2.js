@@ -13,15 +13,15 @@ console.log(header.display("Jason" , "Sullenger" , "Exercise 2.2"));
 
 var express = require("express");
 var http = require("http");
-
-
 var app = express();
 
+// Console logs Hello World on landing
 app.use(function(req, res){
   console.log("In comes a request to: %s", req.url);
   res.end("Hello World\n")
 })
 
+// creates server on port 8080
 http.createServer(app).listen(8080, function(){
   console.log("Application started on port %s", 8080)
 });

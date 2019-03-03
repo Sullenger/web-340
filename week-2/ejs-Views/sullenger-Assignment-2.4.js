@@ -8,7 +8,7 @@
 */
 
 // Console logs the header created previously
-const header = require('../sullenger-header.js');
+const header = require('../../sullenger-header.js');
 console.log(header.display("Jason" , "Sullenger" , "Assignment 2.4"));
 
 var http = require("http");

@@ -1,20 +1,21 @@
 /*
 ============================================
-; Title:  sullenger-exercise-3.2.js
+; Title:  sullenger-exercise-3.3.js
 ; Author: Jason Sullenger
-; Date:   07 March 2019
-; Description:Tests created routes with Morgan logger
+; Date:   08 March 2019
+; Description: Tests dynamic created routes
 ;===========================================
 */
 
 // Console logs the header created previously
 const header = require('../../sullenger-header.js');
-console.log(header.display("Jason" , "Sullenger" , "Exercise 3.2"));
+console.log(header.display("Jason" , "Sullenger" , "Exercise 3.3"));
 
 var express = require("express");
 var http = require("http");
 var path = require("path");
 var logger = require("morgan");
+
 var app = express();
 
 // Tell express the views are in the "views" directory
@@ -25,13 +26,14 @@ app.set("view engine", "ejs");
 
 app.use(logger("short"));
 
-app.get("/", function (req, res){
+app.get("/:employeeId", function(req, res){ 
+    var employeeId = parseInt(req.params.employeeId, 10);
     res.render("index", {
-        message: "Giving the Morgan logger a try"
-    });
+        employeeId: employeeId
+    })
 });
 
 // Creates server on 8080
 http.createServer(app).listen(8080, function(){
     console.log("Application started on port 8080")
-});
+})

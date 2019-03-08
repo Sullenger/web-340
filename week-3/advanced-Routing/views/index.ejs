@@ -1,9 +1,9 @@
 <!--
 ============================================
-; Title:  sullenger-exercise-3.2.js
+; Title:  sullenger-exercise-3.3.js
 ; Author: Jason Sullenger
-; Date:   07 March 2019
-; Description:Utilizing Morgan logger
+; Date:   08 March 2019
+; Description:Displays the routed Employee ID
 ;===========================================
  -->
 
@@ -12,30 +12,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Morgan Logger</title>
+    <title>Advanced Routing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-        </li>
-        
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-    
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-        </li>
-    </ul>
-    
-</nav>    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <div role="main" class="container">
         <br/><br/>
-        <h2><%= message %></h2>
+        <h2><strong>Employee Id: </strong><%= employeeId %></h2>
     </div>
+
 </body>
 </html>

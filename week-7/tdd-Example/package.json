@@ -1,0 +1,11 @@
+{
+  "title": "tdd-Example",
+  "author": "Jason Sullenger",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

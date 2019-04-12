@@ -1,10 +1,11 @@
 /*
 ============================================
 ; Title:  EMS
-; Author: Jason Sullenger
+; Author: Professor Krasso
 ; Date:   21 March 2019
-; Description:
-;===========================================
+; Modified By: Jason Sullenger
+; Description: Employee EMS App
+; ============================================
 */
 
 // Console logs the header created previously
@@ -16,6 +17,7 @@ var http = require("http");
 var path = require("path");
 var mongoose = require("mongoose");
 var logger = require("morgan");
+var helmet = require("helmet")
 
 var Employee = require("./models/employee.js");
 
@@ -45,6 +47,8 @@ var employee = new Employee({
   lastName: "Smith"
 })
 
+app.use(helmet.xssFilter());
+
 app.set("views", path.resolve(__dirname, "views/"));
 
 app.set("view engine", "ejs");
@@ -58,7 +62,7 @@ app.use(express.static(__dirname + '/public'));
 // Routing
 app.get("/", function(req, res) {
   res.render("index", {
-    title: "Homepage"
+    title: "Homepage",
   });
 });
 

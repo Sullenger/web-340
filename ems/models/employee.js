@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  EMS
+; Author: Professor Krasso
+; Date:   07 April 2019
+; Modified By: Jason Sullenger
+; Description: Employee EMS App
+; ============================================
+*/
+
 var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;

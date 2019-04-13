@@ -12,7 +12,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-// employeeSchema define
+// employeeSchema defined
 var employeeSchema = new Schema({
   firstName: String,
   lastName: String

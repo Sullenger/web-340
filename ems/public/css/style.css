@@ -9,3 +9,11 @@ footer {
   width: 100%;
   height: 75px;
 }
+
+#viewLink{
+  color:white;
+}
+
+#viewLink:hover{
+  font-weight: 600;
+}

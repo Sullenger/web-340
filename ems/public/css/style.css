@@ -10,10 +10,10 @@ footer {
   height: 75px;
 }
 
-#viewLink{
-  color:white;
+#viewLink:hover {
+  font-weight: 600;
 }
 
-#viewLink:hover{
-  font-weight: 600;
+.width50 {
+  width: 50%;
 }

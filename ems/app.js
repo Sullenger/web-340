@@ -132,6 +132,22 @@ app.get("/list", function(req, res) {
   });
 });
 
+app.get("/view/:queryName", function(req, res) {
+  var queryName = req.params.queryName;
+  Employee.find({ firstName: queryName }, function(error, employees) {
+    if (error) throw error;
+    console.log(employees);
+    if (employees.length > 0) {
+      res.render("view", {
+        title: "Employee Record",
+        employee: employees
+      });
+    } else {
+      res.redirect("/list");
+    }
+  });
+});
+
 // Creates app
 http.createServer(app).listen(8080, function() {
   console.log("We are live on 8080!");

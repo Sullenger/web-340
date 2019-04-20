@@ -9,8 +9,8 @@
 */
 
 // Console logs the header created previously
-const header = require("../sullenger-header");
-console.log(header.display("Jason", "Sullenger", "EMS"));
+// const header = require("../sullenger-header");
+// console.log(header.display("Jason", "Sullenger", "EMS"));
 
 var express = require("express");
 var http = require("http");
